@@ -1,0 +1,39 @@
+{
+  "dataGeneral": {
+    "viewType": "list",
+    "searchStr": "Driver’s license number: ${request.answers[0].answer}",
+    "ownerName": "John Doe",
+    "plate": "ABC-123",
+    "licenseNo": "${request.answers[0].answer}"
+  },
+  "dataList": [
+    {
+      "ticketNo": "12345",
+      "plate": "ABC-123",
+      "violation": "Parking on Sidewalk",
+      "totalAmount": "$70.00",
+      "createDt": "02/20/2021"
+    },
+    {
+      "ticketNo": "23456",
+      "plate": "ABC-123",
+      "violation": "Parking Within 15 Feet of Fire Hydrant",
+      "totalAmount": "$25.00",
+      "createDt": "03/11/2021"
+    },
+    {
+      "ticketNo": "34567",
+      "plate": "ABC-123",
+      "violation": "Double Parking",
+      "totalAmount": "$20.00",
+      "createDt": "04/05/2021"
+    },
+    {
+      "ticketNo": "45678",
+      "plate": "ABC-123",
+      "violation": "Double Parking",
+      "totalAmount": "$1.00",
+      "createDt": "04/05/2021"
+    }
+  ]
+}

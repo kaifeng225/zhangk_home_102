@@ -1,0 +1,50 @@
+{
+  "dataGeneral": [
+    {
+      "field": "fullName",
+      "alias": "Full name"
+    },
+    {
+      "field": "address",
+      "alias": "Address"
+    },
+    {
+      "field": "phoneNumber",
+      "alias": "Phone number"
+    },
+    {
+      "field": "snowmobileMake",
+      "alias": "Snowmobile Make"
+    },
+    {
+      "field": "snowmobileModel",
+      "alias": "Snowmobile Model"
+    },
+    {
+      "field": "snowmobileVIN",
+      "alias": "Snowmobile VIN"
+    },
+    {
+      "field": "permitStickerNumber",
+      "alias": "Permit Sticker Number"
+    }
+  ],
+  "dataList": [
+    {
+      "field": "flattenData.item",
+      "alias": "ITEM"
+    },
+    {
+      "field": "flattenData.amount",
+      "alias": "AMOUNT DUE"
+    },
+    {
+      "field": "totalAmount",
+      "alias": "Total"
+    },
+    {
+      "field": "permitStickerNumber",
+      "primary": true
+    }
+  ]
+}

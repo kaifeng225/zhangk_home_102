@@ -1,0 +1,34 @@
+{
+  "dataGeneral": {
+    "viewType": "flatten",
+    "searchStr": "Account number: ${request.answers[0].answer}",
+    "customerName": "John Doe",
+    "address": "123 Main Street , Springfield, MO 65801",
+    "accountNo": "${request.answers[0].answer}",
+    "dueDate": "05/20/2021"
+  },
+  "dataList": [
+    {
+      "flattenData": [
+        {
+          "item": "Water",
+          "amount": "$90.00"
+        },
+        {
+          "item": "Sewer",
+          "amount": "$30.00"
+        },
+        {
+          "item": "Natural Gas",
+          "amount": "$150.00"
+        },
+        {
+          "item": "Electricity",
+          "amount": "$45.00"
+        }
+      ],
+      "totalAmount": "$315.00",
+      "accountNo": "${request.answers[0].answer}"
+    }
+  ]
+}

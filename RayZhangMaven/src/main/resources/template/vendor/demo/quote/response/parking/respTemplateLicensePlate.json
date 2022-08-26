@@ -1,0 +1,32 @@
+{
+  "dataGeneral": {
+    "viewType": "list",
+    "searchStr": "License plate: ${request.answers[0].answer}",
+    "ownerName": "John Doe",
+    "plate": "${request.answers[0].answer}",
+    "licenseNo": "CABC-123"
+  },
+  "dataList": [
+    {
+      "ticketNo": "12345",
+      "plate": "${request.answers[0].answer}",
+      "violation": "Parking on Sidewalk",
+      "totalAmount": "$70.00",
+      "createDt": "02/20/2021"
+    },
+    {
+      "ticketNo": "23456",
+      "plate": "${request.answers[0].answer}",
+      "violation": "Parking Within 15 Feet of Fire Hydrant",
+      "totalAmount": "$25.00",
+      "createDt": "03/11/2021"
+    },
+    {
+      "ticketNo": "34567",
+      "plate": "${request.answers[0].answer}",
+      "violation": "Double Parking",
+      "totalAmount": "$20.00",
+      "createDt": "04/05/2021"
+    }
+  ]
+}

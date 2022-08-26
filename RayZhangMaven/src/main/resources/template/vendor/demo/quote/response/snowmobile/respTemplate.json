@@ -1,0 +1,25 @@
+{
+  "dataGeneral": {
+    "viewType": "flatten",
+    "searchStr": "Permit Sticker Number: ${request.answers[7].answer}",
+    "fullName": "${request.answers[0].answer} ${request.answers[1].answer}",
+    "address": "${request.answers[2].answer}",
+    "phoneNumber": "${request.answers[3].answer}",
+    "snowmobileMake": "${request.answers[4].answer}",
+    "snowmobileModel": "${request.answers[5].answer}",
+    "snowmobileVIN": "${request.answers[6].answer}",
+    "permitStickerNumber": "${request.answers[7].answer}"
+  },
+  "dataList": [
+    {
+      "flattenData": [
+        {
+          "item": "Permit Fee",
+          "amount": "$35.00"
+        }
+      ],
+      "totalAmount": "$35.00",
+      "permitStickerNumber": "${request.answers[7].answer}"
+    }
+  ]
+}

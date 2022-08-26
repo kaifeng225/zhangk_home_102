@@ -1,0 +1,17 @@
+{
+  "header": "<#include '/template/vendor/class/common/reqHeader.ftl'>",
+  "params": [
+    {
+      "className": "String",
+      "value": "PaymentManager"
+    },
+    {
+      "className": "String",
+      "value": "${request.order.identifier}"
+    },
+    {
+      "className": "String",
+      "value": "<#include '/template/vendor/class/submit/request/reqParam.ftlx'>"
+    }
+  ]
+}

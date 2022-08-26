@@ -1,0 +1,38 @@
+{
+  "dataGeneral": [
+    {
+      "field": "customerName",
+      "alias": "Customer name"
+    },
+    {
+      "field": "address",
+      "alias": "Service address"
+    },
+    {
+      "field": "accountNo",
+      "alias": "Account number"
+    },
+    {
+      "field": "dueDate",
+      "alias": "Due date"
+    }
+  ],
+  "dataList": [
+    {
+      "field": "flattenData.item",
+      "alias": "ITEM"
+    },
+    {
+      "field": "flattenData.amount",
+      "alias": "AMOUNT DUE"
+    },
+    {
+      "field": "amount",
+      "alias": "Total"
+    },
+    {
+      "field": "accountNo",
+      "primary": true
+    }
+  ]
+}
