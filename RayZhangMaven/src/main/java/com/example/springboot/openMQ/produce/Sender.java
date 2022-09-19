@@ -53,7 +53,7 @@ public class Sender {
 			TextMessage tm = sn.createTextMessage();
 			tm.setStringProperty("AppLabel", "submit.OrderRegistration.Payment Manager");
 			tm.setStringProperty("SalesChannel", "FRONT_DESK");
-			tm.setText("140969729492927");
+			tm.setText("140969748516927");
 			mp.send(tm);
 			System.out.println("Message sent:");
 			sn.close();
