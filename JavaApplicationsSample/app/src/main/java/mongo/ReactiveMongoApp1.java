@@ -20,11 +20,11 @@ import com.mongodb.reactivestreams.client.MongoDatabase;
 import reactor.core.publisher.Mono;
 
 /**
- * mongoµÄreactive»¹ÓÐÎÊÌâ ÉÐ´ýÑÐ¾¿
+ * mongoï¿½ï¿½reactiveï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð´ï¿½ï¿½Ð¾ï¿½
  * @author rzhang2
  *
  */
-public class ReactiveMongoApp {
+public class ReactiveMongoApp1 {
 	
 	private static ReactiveMongoTemplate mongoOps;
 	

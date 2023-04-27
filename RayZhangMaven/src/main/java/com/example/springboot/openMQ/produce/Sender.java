@@ -12,10 +12,16 @@ public class Sender {
 		RetryProperties rPropertie = new RetryProperties();
 		String destinationName=rPropertie.getMqDestinationName();
 		destinationName="ProcessOrderQueue";
-//		manualSend(destinationName,"140969730869232");
+		/**
+		 * payment: 140969862240826=24177
+		 * refund:140969759448626=22704;
+		 * 
+		 */
+		manualSend(destinationName,"140969862240826");
 //		jmsTemplate(rPropertie);
 		
-		manualSendToPMS();
+//		manualSendToPMS();
+//		manualSendToPOS();
 	}
 
 	private static void manualSend(String destinationName,String content) {
@@ -54,6 +60,27 @@ public class Sender {
 			tm.setStringProperty("AppLabel", "submit.OrderRegistration.Payment Manager");
 			tm.setStringProperty("SalesChannel", "FRONT_DESK");
 			tm.setText("140969748516927");
+			mp.send(tm);
+			System.out.println("Message sent:");
+			sn.close();
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void manualSendToPOS() {
+		try {
+			ConnectionFactory cf = new com.sun.messaging.ConnectionFactory();
+			((com.sun.messaging.ConnectionFactory) cf)
+					.setProperty(com.sun.messaging.ConnectionConfiguration.imqAddressList, "localhost:7676");
+			Connection con = cf.createConnection();
+			Session sn = con.createSession(false, Session.AUTO_ACKNOWLEDGE);
+			Destination dest = sn.createQueue("ProcessOrderQueue");
+			MessageProducer mp = sn.createProducer(dest);
+			TextMessage tm = sn.createTextMessage();
+			tm.setStringProperty("SalesChannel", "POS-Offline");
+			tm.setText("140969754337926");
 			mp.send(tm);
 			System.out.println("Message sent:");
 			sn.close();

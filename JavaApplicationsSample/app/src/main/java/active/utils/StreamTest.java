@@ -13,7 +13,7 @@ import com.google.common.collect.Maps;
 
 public class StreamTest {
 	
-	private void testCollectors() {
+	private static void testCollectors() {
 		StreamStudent s1 = new StreamStudent("aa", 10,1);
 		StreamStudent s2 = new StreamStudent("bb", 20,2);
 		StreamStudent s3 = new StreamStudent("cc", 10,3);
@@ -30,6 +30,11 @@ public class StreamTest {
 		 
 		//字符串分隔符连接
 		String joinName = list.stream().map(StreamStudent::getName).collect(Collectors.joining(",", "(", ")")); // (aa,bb,cc)
+		
+		boolean anyMatchRes=list.stream().anyMatch(stu->stu.getAge()==20);
+		boolean allMatchRes=list.stream().allMatch(stu->stu.getAge()==10);
+		List<Integer> ages=list.stream().map(StreamStudent::getAge).distinct().collect(Collectors.toList());
+		System.out.println("=============---"+ages.toString());
 		 
 		//聚合操作
 		//1.学生总数
@@ -69,7 +74,8 @@ public class StreamTest {
 	}
 
 	public static void main(String[] args) {
-		testGroup();
+		testCollectors();
+//		testGroup();
 
 	}
 

@@ -37,9 +37,9 @@ public class ObjectMapperSingleton {
             instance.configure(DeserializationFeature.READ_DATE_TIMESTAMPS_AS_NANOSECONDS, false);
             instance.configure(DeserializationFeature.ACCEPT_FLOAT_AS_INT, false);
             instance.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-            SimpleModule module = new SimpleModule();
-            module.addDeserializer(String.class, new StringTrimDeserializer());
-            instance.registerModules(new JavaTimeModule(), module);
+//            SimpleModule module = new SimpleModule();
+//            module.addDeserializer(String.class, new StringTrimDeserializer());
+            instance.registerModules(new JavaTimeModule());
             return instance;
         }
     }
