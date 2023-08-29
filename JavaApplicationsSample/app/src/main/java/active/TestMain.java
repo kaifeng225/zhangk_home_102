@@ -1,8 +1,10 @@
 package active;
 
 import java.time.Instant;
+import java.time.ZoneId;
 import java.util.Currency;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -16,11 +18,6 @@ import com.google.common.collect.Sets;
 
 public class TestMain {
     public static void main(String[] args) {
-        Date dd=new Date();
-        Instant ff=Instant.ofEpochMilli(dd.getTime());
-        System.out.println("---------"+ff.toString());        
-        System.out.println("+++++++++++++"+TimeZone.getDefault().getDisplayName());
-        
         Set<String> vendorTranParams=Sets.newHashSet("items");
         Map<String,Object> data= Maps.newHashMap();
         data.put("aaa", "bbb");        
@@ -32,7 +29,6 @@ public class TestMain {
         String customerEpid="324df0ad-27cf-4811-be00-3699926bb44c";
         System.out.println( StringUtils.containsIgnoreCase(assignee, customerEpid));
         
+       
     }
-    
-   
 }

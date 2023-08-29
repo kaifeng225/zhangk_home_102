@@ -15,9 +15,11 @@ public class Publisher {
 //		sendMessageDemo("Hello world");
 //		sendHeaderPatternMessage("header test","email");
 //		sendWorkflowChangeMessage2PL("{\"WorkflowId\":\"1234\"}","CREATE");
-		sendTransactionMessage2PL("24854");
+//		sendTransactionMessage2PL("24854");
 //		String payload=Constants.INSTANCE_CHANGE_PAYLOAD_PROCESS;
 //		sendInstanceChangeMessage2PL("start",payload);
+		String payload="{\"version\":\"1.0\",\"eventType\":\"CREATE_ORDER\",\"orderId\":140969893358026}";
+		sendOrderMessage(payload);
 	}
 	
 	private static void sendMessageDemo(String message) {
@@ -194,6 +196,25 @@ public class Publisher {
             AMQP.BasicProperties.Builder properties = new AMQP.BasicProperties.Builder();
             properties.headers(sendheaders);
 			channel.basicPublish("jf.workflow-service.instance-changes.headers.exchange", "", properties.build(), payload.getBytes());
+			System.out.println("sent message='"+payload+"' successful");
+			//close channel and connection
+			RabbitConnectionUtil.closeConnection(connection,channel);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			RabbitConnectionUtil.closeConnection(connection,channel);
+		}
+		
+	}
+	
+	private static void sendOrderMessage(String payload) {
+		Connection connection=null;
+		Channel channel=null;
+		try {
+			connection=RabbitConnectionUtil.getGuestConnection();
+			channel=connection.createChannel();  					
+           
+			channel.basicPublish("aw.order-service.order.topic", "PMTMGR.*", null, payload.getBytes());
 			System.out.println("sent message='"+payload+"' successful");
 			//close channel and connection
 			RabbitConnectionUtil.closeConnection(connection,channel);
