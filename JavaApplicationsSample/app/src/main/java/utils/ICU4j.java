@@ -12,8 +12,8 @@ public class ICU4j {
 
 	public static void main(String[] args) {	
 		
-		System.out.println("=========" + TimeZone.getWindowsID("US/Eastern"));
-//		testICU4jTimeZones();
+//		System.out.println("=========" + TimeZone.getWindowsID("US/Eastern"));
+		testICU4jTimeZones();
 	}
 	
 	private static void testICU4jTimeZones() {

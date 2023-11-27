@@ -30,7 +30,7 @@ public class RabbitConnectionUtil {
 		ConnectionFactory factory=new ConnectionFactory();
 		factory.setHost("localhost");
 		factory.setPort(5672);
-		factory.setVirtualHost("/");
+		factory.setVirtualHost("/aw");
 		factory.setUsername("guest");
 		factory.setPassword("guest");
 		return factory.newConnection();

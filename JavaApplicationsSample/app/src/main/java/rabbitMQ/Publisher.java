@@ -14,12 +14,22 @@ public class Publisher {
 	public static void main(String[] args) {
 //		sendMessageDemo("Hello world");
 //		sendHeaderPatternMessage("header test","email");
-//		sendWorkflowChangeMessage2PL("{\"WorkflowId\":\"1234\"}","CREATE");
+		/**
+		 * CREATE: {"WorkflowId":"72027"}
+		 * COPY: Constants.WORKFLOW_CHANGE_PAYLOAD_COPY
+		 */
+		sendWorkflowChangeMessage2PL(Constants.WORKFLOW_CHANGE_PAYLOAD_COPY,"COPY");
 //		sendTransactionMessage2PL("24854");
 //		String payload=Constants.INSTANCE_CHANGE_PAYLOAD_PROCESS;
 //		sendInstanceChangeMessage2PL("start",payload);
-		String payload="{\"version\":\"1.0\",\"eventType\":\"CREATE_ORDER\",\"orderId\":140969893358026}";
-		sendOrderMessage(payload);
+		String payload="{\"v2\":{\"eventType\":\"CREATE_ORDER\",\"orderId\":140969893358026}}";
+		/**
+		 * ES order handle: PMTMGR.*
+		 * normal order handle: PMTMGR.CITIZEN_UI; PMTMGR.FRONT_DESK;PMTMGR.IVR;PMTMGR.SMS
+		 * POS： *.POS-Offline
+		 */
+		String routingKey="ray.POS-Offline";
+//		sendOrderMessage(payload,routingKey);
 	}
 	
 	private static void sendMessageDemo(String message) {
@@ -127,14 +137,17 @@ public class Publisher {
 		try {
 			connection=RabbitConnectionUtil.getGuestConnection();
 			channel=connection.createChannel();
-			channel.exchangeDeclare(Constants.EXCHANGE_HEADER_PERMITTING, BuiltinExchangeType.HEADERS,true);
-			channel.queueDeclare(Constants.PL_WORKFLOW_QUEUE_NAME,true,false,false,null);
-			Map<String, Object> headers = new Hashtable<String, Object>();
-			headers.put("EventType", eventType);
-			channel.queueBind(Constants.PL_WORKFLOW_QUEUE_NAME, Constants.EXCHANGE_HEADER_PERMITTING, "", headers);
+//			channel.exchangeDeclare(Constants.EXCHANGE_HEADER_PERMITTING, BuiltinExchangeType.HEADERS,true);
+//			channel.exchangeDeclare("jf.workflow-service.template-changes.alternate.exchange", BuiltinExchangeType.HEADERS,true);
+//			channel.queueDeclare(Constants.PL_WORKFLOW_QUEUE_NAME,true,false,false,null);
+//			Map<String, Object> headers = new Hashtable<String, Object>();
+//			headers.put("EventType", eventType);
+//			channel.queueBind(Constants.PL_WORKFLOW_QUEUE_NAME, Constants.EXCHANGE_HEADER_PERMITTING, "", headers);
 		    //set header info
 			Map<String, Object> sendheaders = new Hashtable<String, Object>();
-			sendheaders.put("EventType", eventType);//匹配eventType通知消费者绑定的header
+			sendheaders.put("ApplicationId", "2");
+			sendheaders.put("x-match", "all");
+			sendheaders.put("EventType", eventType);//匹配eventType通知消费者绑定的header  
             AMQP.BasicProperties.Builder properties = new AMQP.BasicProperties.Builder();
             properties.headers(sendheaders);
 			//send message
@@ -207,14 +220,14 @@ public class Publisher {
 		
 	}
 	
-	private static void sendOrderMessage(String payload) {
+	private static void sendOrderMessage(String payload,String routingKey) {
 		Connection connection=null;
 		Channel channel=null;
 		try {
 			connection=RabbitConnectionUtil.getGuestConnection();
 			channel=connection.createChannel();  					
            
-			channel.basicPublish("aw.order-service.order.topic", "PMTMGR.*", null, payload.getBytes());
+			channel.basicPublish("aw.order-service.order.topic", routingKey, null, payload.getBytes());
 			System.out.println("sent message='"+payload+"' successful");
 			//close channel and connection
 			RabbitConnectionUtil.closeConnection(connection,channel);
