@@ -18,11 +18,11 @@ public class Publisher {
 		 * CREATE: {"WorkflowId":"72027"}
 		 * COPY: Constants.WORKFLOW_CHANGE_PAYLOAD_COPY
 		 */
-		sendWorkflowChangeMessage2PL(Constants.WORKFLOW_CHANGE_PAYLOAD_COPY,"COPY");
+//		sendWorkflowChangeMessage2PL(Constants.WORKFLOW_CHANGE_PAYLOAD_COPY,"COPY");
 //		sendTransactionMessage2PL("24854");
-//		String payload=Constants.INSTANCE_CHANGE_PAYLOAD_PROCESS;
-//		sendInstanceChangeMessage2PL("start",payload);
-		String payload="{\"v2\":{\"eventType\":\"CREATE_ORDER\",\"orderId\":140969893358026}}";
+		String payload=Constants.INSTANCE_CHANGE_PAYLOAD_PROCESS;
+		sendInstanceChangeMessage2PL("start",payload);
+//		String payload="{\"v2\":{\"eventType\":\"CREATE_ORDER\",\"orderId\":140969893358026}}";
 		/**
 		 * ES order handle: PMTMGR.*
 		 * normal order handle: PMTMGR.CITIZEN_UI; PMTMGR.FRONT_DESK;PMTMGR.IVR;PMTMGR.SMS
@@ -201,11 +201,13 @@ public class Publisher {
 		try {
 			connection=RabbitConnectionUtil.getGuestConnection();
 			channel=connection.createChannel();  
-			channel.exchangeDeclare("jf.workflow-service.instance-changes.headers.exchange", BuiltinExchangeType.HEADERS,true);
-			channel.queueDeclare("permitting_service.instance.queue",true,false,false,null);
+//			channel.exchangeDeclare("jf.workflow-service.instance-changes.headers.exchange", BuiltinExchangeType.HEADERS,true);
+//			channel.queueDeclare("permitting_service.instance.queue",true,false,false,null);
 			Map<String, Object> sendheaders = new Hashtable<String, Object>();
 			sendheaders.put("EventType", header);
-			channel.queueBind("permitting_service.instance.queue", "jf.workflow-service.instance-changes.headers.exchange", "", sendheaders);			
+			sendheaders.put("ApplicationId", "2");
+			sendheaders.put("x-match", "all");
+//			channel.queueBind("permitting_service.instance.queue", "jf.workflow-service.instance-changes.headers.exchange", "", sendheaders);			
             AMQP.BasicProperties.Builder properties = new AMQP.BasicProperties.Builder();
             properties.headers(sendheaders);
 			channel.basicPublish("jf.workflow-service.instance-changes.headers.exchange", "", properties.build(), payload.getBytes());
