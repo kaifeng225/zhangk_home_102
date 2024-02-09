@@ -1,0 +1,23 @@
+{
+  "dataGeneral": [],
+  "dataList": [
+    {
+      "field": "flattenData.item",
+      "alias": "Item",
+      "subField": "flattenData.prompts"
+    },
+    {
+      "field": "flattenData.totalAmount",
+      "alias": "Amount"
+    },
+    {
+      "field": "totalAmount",
+      "alias": "Total"
+    },
+    {
+      "field": "itemKey",
+      "primary": true,
+      "desc": "Item Key #"
+    }
+  ]
+}

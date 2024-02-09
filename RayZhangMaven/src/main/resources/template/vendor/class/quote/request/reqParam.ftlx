@@ -1,0 +1,26 @@
+<#ftl output_format="XML">
+<#assign posItem=parseJson(request.vendorItem.sourceData!"")>
+<?xml version="1.0"?>
+<POSItemParams>
+    <POSItemParam>
+        <ItemKey>${posItem.ItemKey}</ItemKey>
+        <PromptAnswers>
+            <#if posItem.PromptInfos.PromptInfo?has_content>
+                <#assign answers=request.answers>
+                <#assign answerMap={}>
+                <#list answers as answer>
+                    <#assign answerMap=answerMap + {answer.formEntryLabel:answer.answer!""}>
+                </#list>
+        <#list posItem.PromptInfos.PromptInfo?is_enumerable?then(posItem.PromptInfos.PromptInfo,[posItem.PromptInfos.PromptInfo]) as prompt>
+            <PromptAnswer>
+                <#assign answer = answerMap[prompt.Message]!"">
+                <#if prompt.PromptType == "5" && answer?has_content>
+                    <#assign answer = (answer?datetime.iso)?date?iso_utc>
+                </#if>
+                <Answer>${answer}</Answer>
+            </PromptAnswer>
+        </#list>
+            </#if>
+        </PromptAnswers>
+    </POSItemParam>
+</POSItemParams>

@@ -1,0 +1,19 @@
+{
+	"dataGeneral": [],
+	"dataList": [
+		{
+			"field": "itemName",
+			"alias": "ITEM NAME"
+		},
+		{
+			"field": "itemKey",
+			"alias": "ITEM KEY",
+			"primary": true,
+			"desc": "Item Key #"
+		},
+		{
+			"field": "totalAmount",
+			"alias": "Base amount"
+		}
+	]
+}

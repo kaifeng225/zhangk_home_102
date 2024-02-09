@@ -1,0 +1,60 @@
+HELP.md
+.gradle
+/build/
+api/out/
+api/build/
+!gradle/wrapper/gradle-wrapper.jar
+**/*.swp
+**/.DS_Store
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+/docker/scripts/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+.DS_Store
+
+# Excel temporary
+~$*.xls*
+/src/main/generated/
+/adapter-service/build/
+/adapter-service/out
+/template-service/build/
+/template-service/out
+/template-vendor/build/
+/template-vendor/out
+
+/core/build/
+/core/out
+/.gradletasknamecache
+/service/build/
+/job/build/
+/service/.pid
+/service/out/
+/job/out/
+/.pid
+*.log
+/auth-component/build/

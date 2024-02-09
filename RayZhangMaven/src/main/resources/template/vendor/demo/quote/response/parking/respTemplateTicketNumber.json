@@ -1,0 +1,18 @@
+{
+  "dataGeneral": {
+    "viewType": "list",
+    "searchStr": "Ticket number: ${request.answers[0].answer}",
+    "ownerName": "John Doe",
+    "plate": "ABC-123",
+    "licenseNo": "ABC-123"
+  },
+  "dataList": [
+    {
+      "ticketNo": "${request.answers[0].answer}",
+      "plate": "ABC-123",
+      "violation": "Parking on Sidewalk",
+      "totalAmount": "$70.00",
+      "createDt": "02/20/2021"
+    }
+  ]
+}

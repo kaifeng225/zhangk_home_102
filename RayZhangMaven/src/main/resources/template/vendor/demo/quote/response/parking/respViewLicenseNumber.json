@@ -1,0 +1,39 @@
+{
+  "dataGeneral": [
+    {
+      "field": "ownerName",
+      "alias": "Owner name"
+    },
+    {
+      "field": "plate",
+      "alias": "Plate"
+    },
+    {
+      "field": "licenseNo",
+      "alias": "Driver’s license number"
+    }
+  ],
+  "dataList": [
+    {
+      "field": "ticketNo",
+      "alias": "TICKET NUMBER",
+      "primary": true
+    },
+    {
+      "field": "plate",
+      "alias": "PLATE"
+    },
+    {
+      "field": "violation",
+      "alias": "VIOLATION"
+    },
+    {
+      "field": "createDt",
+      "alias": "DATE"
+    },
+    {
+      "field": "totalAmount",
+      "alias": "FINE AMOUNT"
+    }
+  ]
+}

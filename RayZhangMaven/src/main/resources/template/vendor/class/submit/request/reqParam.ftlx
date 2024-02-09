@@ -1,0 +1,52 @@
+<#ftl output_format="XML">
+<#assign quoteDetails=request.quoteDetails>
+<?xml version="1.0"?>
+<POSItemParams>
+    <#list quoteDetails as quoteDetail>
+        <#assign items = parseJson(quoteDetail.vendorTranParams).items>
+        <#list items as item>
+        <POSItemParam>
+            <ItemKey>${item.itemKey?default('')}</ItemKey>
+            <CartID>${item.cartId?default('')}</CartID>
+            <#-- we only need to tell class the paid amount, class will allocate the amount using their logic -->
+            <#if item.isMainItem>
+                <Amount>${quoteDetail.amount?default('0')}</Amount>
+            <#else>
+                <Amount>0</Amount>
+            </#if>
+            <Tax>${item.taxAmount?default('0')}</Tax>
+            <ItemCounter>${item.itemCounter?default('0')}</ItemCounter>
+        </POSItemParam>
+        </#list>
+    </#list>
+    <#if request.paymentTypeDetails?has_content>
+    <#assign paymentTypeDetails=request.paymentTypeDetails>
+     <PayTypeInfos>
+      <#list paymentTypeDetails as paymentTypeDetail>
+        <PayTypeInfo>
+          <#if paymentTypeDetail.paymentType?has_content && paymentTypeDetail.paymentType=="PINPAD">
+          <PaymentType>CREDIT_CARD</PaymentType>
+          <#else>
+          <PaymentType>${paymentTypeDetail.paymentType?default('')}</PaymentType>
+          </#if>
+          <#if paymentTypeDetail.contact?has_content>
+          <Name>${paymentTypeDetail.contact.firstName?default('')} ${paymentTypeDetail.contact.lastName?default('')}</Name>
+          <#if paymentTypeDetail.contact.address?has_content>
+          <Address>${paymentTypeDetail.contact.address.toString()?default('')}</Address>
+          <#else>
+          <Address></Address>
+          </#if>
+          <Email>${paymentTypeDetail.contact.emailAddress?default('')}</Email>
+          <#else>
+          <Name></Name>
+          <Address></Address>
+          <Email></Email>
+          </#if>
+          <CardType>${paymentTypeDetail.cardType?default('')}</CardType>
+          <CheckNumber>${paymentTypeDetail.checkNumber?default('')}</CheckNumber>
+          <AccountNumber>${paymentTypeDetail.accountLastTwoDigits?default('')}</AccountNumber>
+        </PayTypeInfo>
+       </#list>
+      </PayTypeInfos>
+    </#if>
+</POSItemParams>

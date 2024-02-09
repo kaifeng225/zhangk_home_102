@@ -1,0 +1,12 @@
+{
+  "params": [
+    {
+      "className": "String",
+      "value": "${meta.username}"
+    },
+    {
+      "className": "String",
+      "value": "${meta.password}"
+    }
+  ]
+}

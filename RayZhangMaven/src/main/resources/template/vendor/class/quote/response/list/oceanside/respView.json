@@ -1,0 +1,25 @@
+{
+  "dataGeneral": [],
+  "dataList": [
+    {
+      "field": "itemName",
+      "alias": "Item Name"
+    },
+    {
+      "field": "ver1",
+      "alias": "Source Module"
+    },
+    {
+      "field": "ver2",
+      "alias": "Fee Description"
+    },
+    {
+      "field": "promptDetail",
+      "alias": "Description"
+    },
+    {
+      "field": "totalAmount",
+      "alias": "Amount"
+    }
+  ]
+}

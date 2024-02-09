@@ -1,0 +1,43 @@
+{
+	"dataGeneral": [],
+	"dataList": [
+		{
+			"field": "flattenData.item",
+			"alias": "Item",
+			"subField": "flattenData.prompts"
+		},
+		{
+			"field": "flattenData.ver1",
+			"alias": "Ver1"
+		},
+		{
+			"field": "flattenData.ver2",
+			"alias": "Ver2"
+		},
+		{
+			"field": "flattenData.ver3",
+			"alias": "Ver3"
+		},
+		{
+			"field": "flattenData.taxAmount",
+			"alias": "Tax"
+		},
+		{
+			"field": "flattenData.amount",
+			"alias": "Amount"
+		},
+		{
+			"field": "flattenData.totalAmount",
+			"alias": "Total"
+		},
+		{
+			"field": "totalAmount",
+			"alias": "Total"
+		},
+		{
+			"field": "itemKey",
+			"primary": true,
+			"desc": "Item Key #"
+		}
+	]
+}
