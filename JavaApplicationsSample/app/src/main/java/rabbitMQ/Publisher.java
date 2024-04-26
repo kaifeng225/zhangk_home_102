@@ -15,21 +15,21 @@ public class Publisher {
 //		sendMessageDemo("Hello world");
 //		sendHeaderPatternMessage("header test","email");
 		/**
-		 * CREATE: {"WorkflowId":"72027"}
-		 * COPY: Constants.WORKFLOW_CHANGE_PAYLOAD_COPY
+		 * CREATE, SAVE, ARCHIVE, UPDATENAMEDESC, COPY
 		 */
-//		sendWorkflowChangeMessage2PL(Constants.WORKFLOW_CHANGE_PAYLOAD_COPY,"COPY");
+		sendWorkflowChangeMessage2PL(Constants.WORKFLOW_CHANGE_PAYLOAD_CREATE,"CREATE");
 //		sendTransactionMessage2PL("24854");
-		String payload=Constants.INSTANCE_CHANGE_PAYLOAD_PROCESS;
-		sendInstanceChangeMessage2PL("start",payload);
-//		String payload="{\"v2\":{\"eventType\":\"CREATE_ORDER\",\"orderId\":140969893358026}}";
+//		String payload=Constants.INSTANCE_CHANGE_PAYLOAD_PROCESS;
+//		sendInstanceChangeMessage2PL("start",payload);
+		String payload="{\"v2\":{\"eventType\":\"CREATE_ORDER\",\"orderId\":1669146606341}}";
 		/**
 		 * ES order handle: PMTMGR.*
-		 * normal order handle: PMTMGR.CITIZEN_UI; PMTMGR.FRONT_DESK;PMTMGR.IVR;PMTMGR.SMS
+		 * normal order handle: PMTMGR.CITIZEN_UI; PMTMGR.FRONT_DESK;PMTMGR.IVR;PMTMGR.SMS；PMTMGR.EXTERNAL_IMPORTED；PMTMGR.CAPTIVATE
 		 * POS： *.POS-Offline
 		 */
-		String routingKey="ray.POS-Offline";
+		String routingKey="PMTMGR.FRONT_DESK";
 //		sendOrderMessage(payload,routingKey);
+//		sendImportOrderMessage("{\"paymentImportId\": 77}","import-payment.key");
 	}
 	
 	private static void sendMessageDemo(String message) {
@@ -230,6 +230,25 @@ public class Publisher {
 			channel=connection.createChannel();  					
            
 			channel.basicPublish("aw.order-service.order.topic", routingKey, null, payload.getBytes());
+			System.out.println("sent message='"+payload+"' successful");
+			//close channel and connection
+			RabbitConnectionUtil.closeConnection(connection,channel);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			RabbitConnectionUtil.closeConnection(connection,channel);
+		}
+		
+	}
+	
+	private static void sendImportOrderMessage(String payload,String routingKey) {
+		Connection connection=null;
+		Channel channel=null;
+		try {
+			connection=RabbitConnectionUtil.getGuestConnection();
+			channel=connection.createChannel();  					
+           
+			channel.basicPublish("payment-manager-service.import-payment.topic.exchange", routingKey, null, payload.getBytes());
 			System.out.println("sent message='"+payload+"' successful");
 			//close channel and connection
 			RabbitConnectionUtil.closeConnection(connection,channel);

@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.commons.collections4.MapUtils;
 
+import com.google.common.collect.Maps;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.AMQP.BasicProperties;
 import com.rabbitmq.client.BuiltinExchangeType;
@@ -23,11 +24,12 @@ public class Consumer {
 		 * "sms",Constants.QUEUE_HEADER_SMS
 		 *  "email",Constants.QUEUE_HEADER_EMAIL
 		 */
-		consumeHeaderMessage("email",Constants.QUEUE_HEADER_EMAIL);
+//		consumeHeaderMessage("email",Constants.QUEUE_HEADER_EMAIL);
 		/**
 		 * CREATE, SAVE, ARCHIVE, UPDATENAMEDESC, COPY
 		 */
 //		consumePermittingMessage("CREATE");
+		consumeDeadLetter("permitting_service.workflow.dead-letter.queue");
 
 	}
 	
@@ -193,6 +195,40 @@ public class Consumer {
 			RabbitConnectionUtil.closeConnection(connection,channel);
 		}
 		
+	}
+	
+	private static void consumeDeadLetter(String queuename) {
+		Connection connection=null;
+		Channel channel=null;
+		try {
+		connection=RabbitConnectionUtil.getGuestConnection();
+		channel=connection.createChannel();
+		Map<String, Object> arguments = Maps.newHashMap();
+//		arguments.put("x-dead-letter-exchange", "permitting_service.workflow.dlx_exchange");
+//		arguments.put("x-dead-letter-routing-key", "workflow_dead_letter_key");	
+		arguments.put("x-queue-type", "quorum");
+		channel.queueDeclare(queuename,true,false,false,arguments);
+		DefaultConsumer consumer =new DefaultConsumer(channel) {
+			@Override
+			public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties, byte[] body)
+					throws IOException {
+				System.out.println("receive message:"+new String(body,"UTF-8"));
+			}
+			
+		};
+		
+		channel.basicConsume(queuename, true,consumer);
+		System.out.println("start to monitor the queue");
+		 /**
+         * hold the process to wait the message	
+         * close connection will not waiting for new messages 
+         */
+//		RabbitConnectionUtil.closeConnection(connection,channel);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			RabbitConnectionUtil.closeConnection(connection,channel);
+		}
 	}
 
 }
