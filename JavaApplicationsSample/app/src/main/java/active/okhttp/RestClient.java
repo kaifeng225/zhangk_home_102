@@ -5,12 +5,11 @@ import java.util.Optional;
 
 import javax.annotation.Nonnull;
 
-import org.apache.commons.lang.StringUtils;
-
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.HttpUrl;
 import okhttp3.Request;
 import okhttp3.RequestBody;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * base class for ok http client

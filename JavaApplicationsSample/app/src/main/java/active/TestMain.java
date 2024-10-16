@@ -1,13 +1,9 @@
 package active;
 
 import java.util.List;
-import java.util.Set;
-import java.util.UUID;
-
-import org.apache.commons.collections4.CollectionUtils;
+import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 
 
 public class TestMain {
@@ -19,8 +15,6 @@ public class TestMain {
 //        System.out.println(UUID.randomUUID().toString()+"==============="+result.toString());
 //        
 //        System.out.println(Currency.getAvailableCurrencies());
-        
 
-       
     }
 }

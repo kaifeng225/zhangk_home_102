@@ -10,16 +10,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class HelloController {
 
-	@RequestMapping("/")
-	public String index() {
-		return "Greetings from Spring Boot!";
-	}
+    @RequestMapping("/")
+    public String index() {
+        return "Greetings from Spring Boot!";
+    }
 
-	@RequestMapping("/hello")
-	public String index(@RequestParam("user") String user) {
-		return user + "Greetings from Spring 经济Boot!";
-	}
+    @RequestMapping("/hello")
+    public String index(@RequestParam("user") String user) {
+        return user + "Greetings from Spring 经济Boot!";
+    }
 
-	
 
 }

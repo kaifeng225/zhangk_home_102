@@ -21,44 +21,44 @@ import reactor.core.publisher.Mono;
 
 /**
  * mongo��reactive�������� �д��о�
- * @author rzhang2
  *
+ * @author rzhang2
  */
 public class ReactiveMongoApp1 {
-	
-	private static ReactiveMongoTemplate mongoOps;
-	
-	private static Mono<ReactiveMongoTemplate> getTemplate1(Mono<List<String>> settings) {
-		return settings.map(list->{
-			MongoClient mongoClient = MongoClients.create(list.get(0));	
-			ReactiveMongoTemplate template =new ReactiveMongoTemplate(mongoClient, list.get(1));
-			 System.out.println("======2=======");
-	        return template;	        
-		});		
-	}
-	
-	private static Mono<MongoClient> getTemplate2(Mono<List<String>> settings) {
-		// Replace the uri string with your MongoDB deployment's connection string.
-		return settings.map(list -> {
-			ConnectionString connString = new ConnectionString(list.get(0));
-			MongoClientSettings clientSettings = MongoClientSettings.builder().applyConnectionString(connString)
-					.retryWrites(true).build();
-			MongoClient mongoClient = MongoClients.create(clientSettings);
-			return mongoClient;
-		});
-	}
+
+    private static ReactiveMongoTemplate mongoOps;
+
+    private static Mono<ReactiveMongoTemplate> getTemplate1(Mono<List<String>> settings) {
+        return settings.map(list -> {
+            MongoClient mongoClient = MongoClients.create(list.get(0));
+            ReactiveMongoTemplate template = new ReactiveMongoTemplate(mongoClient, list.get(1));
+            System.out.println("======2=======");
+            return template;
+        });
+    }
+
+    private static Mono<MongoClient> getTemplate2(Mono<List<String>> settings) {
+        // Replace the uri string with your MongoDB deployment's connection string.
+        return settings.map(list -> {
+            ConnectionString connString = new ConnectionString(list.get(0));
+            MongoClientSettings clientSettings = MongoClientSettings.builder().applyConnectionString(connString)
+              .retryWrites(true).build();
+            MongoClient mongoClient = MongoClients.create(clientSettings);
+            return mongoClient;
+        });
+    }
 
     public static void main(String[] args) throws Exception {
-        String url="mongodb://pos_service:RYDrNHGjpf@localhost:27017/pos_service";
-        String database="pos_service";
+        String url = "mongodb://pos_service:RYDrNHGjpf@localhost:27017/pos_service";
+        String database = "pos_service";
         CountDownLatch latch = new CountDownLatch(1);
-        Mono<ReactiveMongoTemplate> mongoOps=getTemplate1(Mono.just(Lists.newArrayList(url,database)));
-        Mono<Person> person= insert(mongoOps);
+        Mono<ReactiveMongoTemplate> mongoOps = getTemplate1(Mono.just(Lists.newArrayList(url, database)));
+        Mono<Person> person = insert(mongoOps);
         person.subscribe();
 //        person.subscribe();
         latch.await();
     }
-    
+
 //    private static void search(Mono<MongoClient> monoClient) {
 //    	monoClient.map(client->{
 //    		MongoDatabase database = client.getDatabase("reactive").getCollection("person").;
@@ -73,15 +73,16 @@ public class ReactiveMongoApp1 {
 //    	
 //			
 //    }
-    
-	private static Mono<Person> insert(Mono<ReactiveMongoTemplate> mongoOps) {
-		  return mongoOps.flatMap(ops -> {
-			 System.out.println("======5=======");
-			 return ops.insert(new Person("reactive", 34)).flatMap(p -> ops.findOne(new Query(where("name").is("reactive")), Person.class))
-					 .doOnNext(person -> System.out.println(person.toString()))
+
+    private static Mono<Person> insert(Mono<ReactiveMongoTemplate> mongoOps) {
+        return mongoOps.flatMap(ops -> {
+            System.out.println("======5=======");
+            return ops.insert(new Person("reactive", 34)).flatMap(p -> ops.findOne(new Query(where("name").is("reactive")), Person.class))
+              .doOnNext(person -> System.out.println(person.toString()))
 //					 .flatMap(person -> ops.dropCollection("person"))
-						.doOnSuccess(t -> System.out.println("============" + t.toString()))
+              .doOnSuccess(t -> System.out.println("============" + t.toString()))
 //						.doOnComplete(latch::countDown)
-						;});		
-	}
+              ;
+        });
+    }
 }

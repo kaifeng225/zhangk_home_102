@@ -6,13 +6,4 @@ spring:
   redis:
     host: localhost
     port: 6379
-    timeout: 5s # connection time out  
-retry:
-  first-retry-backoff-ms: 1000
-  max-retry-times: 10
-  base: 1
-  mq-listener-concurrency: 2-5
-jmsmq:
-  async:
-    openmq:
-      addresslist: mq://localhost:7676
+    timeout: 5s # connection time out

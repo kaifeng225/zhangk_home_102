@@ -6,9 +6,9 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class StreamStudent {
-	
-	private String name;
-	private int age;
-	private int type;
+
+    private String name;
+    private int age;
+    private int type;
 
 }

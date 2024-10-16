@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StreamPerson {
-	private String name;
-	private String description1;
-	
+    private String name;
+    private String description1;
+
 }

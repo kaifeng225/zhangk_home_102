@@ -3,9 +3,9 @@
  */
 package active;
 
-import javax.xml.ws.Endpoint;
-
 import active.webservice.WeatherInterfaceImpl;
+
+import javax.xml.ws.Endpoint;
 
 public class App {
     public String getGreeting() {
