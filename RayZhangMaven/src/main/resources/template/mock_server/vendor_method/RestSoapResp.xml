@@ -1,0 +1,47 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <ValidateItemPromptResponse xmlns="urn:ClassPOSServices">
+         <ValidateItemPromptResult>
+            <StatusID>0</StatusID>
+            <StatusText/>
+            <ItemsXML><![CDATA[<?xml version="1.0"?>
+<ItemsXML>
+   <CartID>429199</CartID>
+   <ItemXML>
+      <ItemKey>103</ItemKey>
+      <ThirdPartyItemKey>0</ThirdPartyItemKey>
+      <ItemKeyType>0</ItemKeyType>
+      <ItemType>PLU</ItemType>
+      <ItemCounter>1</ItemCounter>
+      <Amount>1111</Amount>
+      <Tax>0</Tax>
+      <SetAmount>True</SetAmount>
+      <Quantity>1</Quantity>
+      <MaintainsInventory>False</MaintainsInventory>
+      <QuantityOnHand></QuantityOnHand>
+      <ThirdPartyApplicationId></ThirdPartyApplicationId>
+      <ExportAppTypeField1></ExportAppTypeField1>
+      <ExportAppTypeField2></ExportAppTypeField2>
+      <ItemName>Item Test list</ItemName>
+      <LinkedItemFlag>False</LinkedItemFlag>
+      <ShippingChargeFlag>False</ShippingChargeFlag>
+      <ParentItemCounter>0</ParentItemCounter>
+      <IsManySPFlag>False</IsManySPFlag>
+      <PromptAnswer2></PromptAnswer2>
+      <Ver1></Ver1>
+      <Ver2></Ver2>
+      <Ver3></Ver3>
+      <GroupSpReceiptString></GroupSpReceiptString>
+      <GroupSpReturnString></GroupSpReturnString>
+      <PromptInfos>
+      </PromptInfos>
+      <GLAccountInfos>
+      </GLAccountInfos>
+   </ItemXML>
+   <PayTypeInfos>
+   </PayTypeInfos>
+</ItemsXML>]]></ItemsXML>
+         </ValidateItemPromptResult>
+      </ValidateItemPromptResponse>
+   </soap:Body>
+</soap:Envelope>

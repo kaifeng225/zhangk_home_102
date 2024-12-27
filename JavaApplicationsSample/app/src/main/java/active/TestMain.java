@@ -1,9 +1,6 @@
 package active;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import com.google.common.collect.Lists;
+import java.util.Currency;
 
 
 public class TestMain {
@@ -14,7 +11,7 @@ public class TestMain {
 //        Map<String,Object> result=Maps.filterValues(Maps.asMap(vendorTranParams, data::get),obj->Objects.nonNull(obj));
 //        System.out.println(UUID.randomUUID().toString()+"==============="+result.toString());
 //        
-//        System.out.println(Currency.getAvailableCurrencies());
+        System.out.println(Currency.getAvailableCurrencies());
 
     }
 }

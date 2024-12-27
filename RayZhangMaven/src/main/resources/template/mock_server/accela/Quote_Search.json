@@ -1,0 +1,45 @@
+{
+  "result": [
+    {
+      "name": "TEST - For DigEplan",
+      "id": "${recordId}",
+      "type": {
+        "module": "Building",
+        "value": "Building/Combo/NA/NA",
+        "type": "Combo",
+        "text": "Building",
+        "group": "Building",
+        "alias": "Building",
+        "subType": "NA",
+        "category": "NA",
+        "id": "Building-Combo-NA-NA"
+      },
+      "description": "This is a test record for TPS. Do not process.",
+      "module": "Building",
+      "status": {
+        "value": "ApplCanceled",
+        "text": "ApplCanceled"
+      },
+      "serviceProviderCode": "CONCORD",
+      "shortNotes": "RNEW",
+      "createdBy": "KHOBDAY",
+      "updateDate": "2020-08-04 12:16:46",
+      "statusType": "CLOSED",
+      "openedDate": "2020-08-04 00:00:00",
+      "jobValue": 1000.0,
+      "renewalInfo": {
+        "expirationDate": "2022-03-27 00:00:00",
+        "expirationStatus": "Expired"
+      },
+      "trackingId": 1439734541964,
+      "customId": "B202147",
+      "value": "DUB20-00000-003UM"
+    }
+  ],
+  "status": 200,
+  "page": {
+    "offset": 0,
+    "limit": 25,
+    "hasmore": false
+  }
+}

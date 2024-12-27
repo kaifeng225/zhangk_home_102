@@ -1,0 +1,828 @@
+{
+  "result": [
+    {
+      "priority": 0,
+      "description": {
+        "value": "Technology Fee (BL)",
+        "text": "Technology Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "SG-PERCENTAGE",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "2248100R999-46315-8600",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 3.51,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 10,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 3.51,
+      "id": 30566753,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "TECHFEE_BL",
+        "text": "TECHFEE_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Technology Fee (BL)",
+        "text": "Technology Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "SG-PERCENTAGE",
+      "applyDate": "2024-12-11 18:07:21",
+      "accountCode1": "2248100R999-0463158600",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 6.44,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 10,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "Y",
+      "invoiceId": 237491,
+      "balanceDue": 6.44,
+      "id": 31208771,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "TECHFEE_BL",
+        "text": "TECHFEE_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Technology Fee (PL)",
+        "text": "Technology Fee (PL)"
+      },
+      "status": "INVOICED",
+      "variable": "SG-PERCENTAGE",
+      "applyDate": "2024-12-12 21:29:14",
+      "accountCode1": "2248100R999-0463158200",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 0.0,
+      "subGroup": {
+        "value": "TFP",
+        "text": "TFP"
+      },
+      "displayOrder": 20,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237492,
+      "balanceDue": 0.0,
+      "id": 31208790,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "TECHFEE_PL",
+        "text": "TECHFEE_PL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Administrative Fee (BL)",
+        "text": "Administrative Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "LINEAR_MIN_MAX_VALUATION",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "1008600R999-46316",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 43.85,
+      "maxFee": 500.0,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 40,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 43.85,
+      "id": 30566754,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "ADMIN_BL",
+        "text": "ADMIN_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Administrative Fee (BL)",
+        "text": "Administrative Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "LINEAR_MIN_MAX_VALUATION",
+      "applyDate": "2024-12-10 08:45:34",
+      "accountCode1": "1008600R999-46316",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 61.29,
+      "maxFee": 550.0,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 40,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237488,
+      "balanceDue": 61.29,
+      "id": 31208730,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "ADMIN_BL",
+        "text": "ADMIN_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Administrative Fee (BL)",
+        "text": "Administrative Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "LINEAR_MIN_MAX_VALUATION",
+      "applyDate": "2024-12-11 18:07:21",
+      "accountCode1": "1008600R999-46316",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 61.29,
+      "maxFee": 550.0,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 40,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237491,
+      "balanceDue": 61.29,
+      "id": 31208772,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "ADMIN_BL",
+        "text": "ADMIN_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Child Care Program Fee (BL)",
+        "text": "Child Care Program Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "ICBO_BLDG_PERMIT",
+      "applyDate": "2024-12-10 08:45:53",
+      "accountCode1": "4608800R999-50130",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 5.0,
+      "displayOrder": 90,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237488,
+      "balanceDue": 5.0,
+      "id": 31208731,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "CHILD_BL",
+        "text": "CHILD_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Valuation Based Plan Review Fee (BL)",
+        "text": "Valuation Based Plan Review Fee (BL)"
+      },
+      "status": "CREDITED",
+      "variable": "ICBO_BLDG_PERMIT",
+      "applyDate": "2024-12-12 21:33:21",
+      "accountCode1": "1008600R999-46210",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 83.93,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 105,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237494,
+      "balanceDue": 0.0,
+      "id": 31208793,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "VBPR_BL",
+        "text": "VBPR_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Reroof Fee (BL)",
+        "text": "Reroof Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "LINEAR_WITH_MIN_MAX",
+      "applyDate": "2024-12-11 18:06:45",
+      "accountCode1": "1008600R999-42020",
+      "unit": {
+        "value": "SQ FT",
+        "text": "SQ FT"
+      },
+      "amount": 86.59,
+      "subGroup": {
+        "value": "TFB",
+        "text": "TFB"
+      },
+      "displayOrder": 142,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237490,
+      "balanceDue": 86.59,
+      "id": 31208770,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "REROOF_BL",
+        "text": "REROOF_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Document Management up to 11x17 (BL)",
+        "text": "Document Management up to 11x17 (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "FEE_MULTIPLIER",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "1008600R999-46286",
+      "unit": {
+        "value": "PAGES",
+        "text": "PAGES"
+      },
+      "amount": 1.9,
+      "displayOrder": 700,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "Y",
+      "invoiceId": 237477,
+      "balanceDue": 1.9,
+      "id": 30566755,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "DOCIMGUT_BL",
+        "text": "DOCIMGUT_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Document Management greater than 11x17  (BL)",
+        "text": "Document Management greater than 11x17  (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "FEE_MULTIPLIER",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "1008600R999-46286",
+      "unit": {
+        "value": "PAGES",
+        "text": "PAGES"
+      },
+      "amount": 4.5,
+      "displayOrder": 710,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 4.5,
+      "id": 30566756,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "DOCIMGGT_BL",
+        "text": "DOCIMGGT_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "CA Building Standards Fee (BL)",
+        "text": "CA Building Standards Fee (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "LINEAR_MIN_MAX_VALUATION",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "850BS-24390",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "accountCode2": "1008600R999-46313",
+      "amount": 1.0,
+      "minFee": 1.0,
+      "displayOrder": 720,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "accountCode1Allocation": 90.0,
+      "feeAllocationType": "PERCENTAGE",
+      "accountCode2Allocation": 10.0,
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 1.0,
+      "id": 30566757,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "CABS_BL",
+        "text": "CABS_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "SMIP Residential  1-3 Stories (BL)",
+        "text": "SMIP Residential  1-3 Stories (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "ICBO_BLDG_PERMIT",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "850BS-24393",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "accountCode2": "1008600R999-46312",
+      "amount": 0.5,
+      "minFee": 0.5,
+      "displayOrder": 730,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "accountCode1Allocation": 95.0,
+      "feeAllocationType": "PERCENTAGE",
+      "accountCode2Allocation": 5.0,
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 0.5,
+      "id": 30566758,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "SMIPRU1-3_BL",
+        "text": "SMIPRU1-3_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "SMIP Commercial or Res Over  3 Stories (BL)",
+        "text": "SMIP Commercial or Res Over  3 Stories (BL)"
+      },
+      "status": "INVOICED",
+      "variable": "ICBO_BLDG_PERMIT",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "850BS-24394",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "accountCode2": "1008600R999-46312",
+      "amount": 0.5,
+      "minFee": 0.5,
+      "displayOrder": 740,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "accountCode1Allocation": 95.0,
+      "feeAllocationType": "PERCENTAGE",
+      "accountCode2Allocation": 5.0,
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 0.5,
+      "id": 30566759,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "SMIPRU03_BL",
+        "text": "SMIPRU03_BL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Gen Plan Zoning Ord Reimbursement PL 223",
+        "text": "Gen Plan Zoning Ord Reimbursement PL 223"
+      },
+      "status": "INVOICED",
+      "variable": "ICBO_BLDG_PERMIT",
+      "applyDate": "2020-08-04 12:16:46",
+      "accountCode1": "2238200R999-46201",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 3.1,
+      "displayOrder": 780,
+      "udf1": "AutoAccessed",
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "Y",
+      "invoiceId": 237478,
+      "balanceDue": 3.1,
+      "id": 30566760,
+      "version": {
+        "value": "2020.1",
+        "text": "2020.1"
+      },
+      "code": {
+        "value": "GPREIM_PL",
+        "text": "GPREIM_PL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    },
+    {
+      "priority": 0,
+      "description": {
+        "value": "Gen Plan Zoning Ord Reimbursement PL 223",
+        "text": "Gen Plan Zoning Ord Reimbursement PL 223"
+      },
+      "status": "INVOICED",
+      "variable": "ICBO_BLDG_PERMIT",
+      "applyDate": "2024-12-11 00:45:29",
+      "accountCode1": "2238200R999-46201",
+      "unit": {
+        "value": "ENTER 1",
+        "text": "ENTER 1"
+      },
+      "amount": 3.1,
+      "displayOrder": 10000,
+      "recordId": {
+        "id": "CONCORD-DUB20-00000-003UM",
+        "missingIdentifier": false,
+        "serviceProviderCode": "CONCORD",
+        "customId": "B202147",
+        "capClass": "COMPLETE",
+        "trackingId": 1439734541964,
+        "value": "DUB20-00000-003UM"
+      },
+      "feeAllocationType": "NONE",
+      "autoAssessFlag": "N",
+      "invoiceId": 237489,
+      "balanceDue": 3.1,
+      "id": 31208750,
+      "version": {
+        "value": "2023.1",
+        "text": "2023.1"
+      },
+      "code": {
+        "value": "REIM_PL",
+        "text": "REIM_PL"
+      },
+      "schedule": {
+        "value": "BL_GEN",
+        "text": "BL_GEN"
+      },
+      "quantity": 1.0,
+      "paymentPeriod": {
+        "value": "FINAL",
+        "text": "FINAL"
+      }
+    }
+  ],
+  "status": 200
+}

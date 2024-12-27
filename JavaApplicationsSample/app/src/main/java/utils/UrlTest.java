@@ -20,7 +20,7 @@ public class UrlTest {
 
     private static void decode() {
         try {
-            String result = URLDecoder.decode("https%3A%2F%2Fpaymentmanagerui-vip.u1.int.aw.dev.activenetwork.com%2Flogin%3FinvitationGuid=ddb3d802-9fcf-41c6-b26b-1cc778e9ec74%26client_id%3D614d0e4d-a8df-42d6-adc1-421aaad54ced", "UTF-8");
+            String result = URLDecoder.decode("https://mockserver-devops.sp.k8su1.dev.activenetwork.com/pm2test/concord/accela/apis/v4/payments/%221209950%22", "UTF-8");
             System.out.println("=====" + result);
         } catch (UnsupportedEncodingException e) {
             // TODO Auto-generated catch block

@@ -24,7 +24,7 @@ public class Publisher {
         /**
          * SUBMIT_ORDER/UPDATE_PAYMENT
          */
-        String payload = "{\"v2\":{\"eventType\":\"SUBMIT_ORDER\",\"orderId\":190972289328083}}";
+        String payload = "{\"v2\":{\"eventType\":\"SUBMIT_ORDER\",\"orderId\":140972757209350}}";
         /**
          * ES order handle: PMTMGR.*
          * normal order handle: PMTMGR.CITIZEN_UI; PMTMGR.FRONT_DESK;PMTMGR.IVR;PMTMGR.SMS；PMTMGR.EXTERNAL_IMPORTED；PMTMGR.CAPTIVATE
@@ -32,7 +32,7 @@ public class Publisher {
          */
         String routingKey = "PMTMGR.FRONT_DESK";
 		sendOrderMessage(payload,routingKey);
-//		sendImportOrderMessage("{\"paymentImportId\": 389}","import-payment.key");
+//		sendImportOrderMessage("{\"paymentImportId\": 20261}","import-payment.key");
     }
 
     private static void sendMessageDemo(String message) {

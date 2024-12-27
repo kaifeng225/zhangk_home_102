@@ -1,0 +1,9 @@
+{
+  "result": {
+    "code": "string",
+    "id": "string",
+    "isSuccess": true,
+    "message": "string"
+  },
+  "status": 0
+}

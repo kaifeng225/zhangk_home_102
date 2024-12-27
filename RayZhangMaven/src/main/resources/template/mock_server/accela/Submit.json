@@ -1,0 +1,15 @@
+{
+  "result": {
+    "completePayments": [
+      {
+        "receiptId": "402395",
+        "serviceProviderCode": "CONCORD",
+        "recordId": "CONCORD-DUB20-00000-003UM",
+        "customId": "B202147",
+        "paymentId": 6893503,
+        "paymentStatus": "Paid"
+      }
+    ]
+  },
+  "status": 200
+}
